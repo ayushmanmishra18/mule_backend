@@ -1,12 +1,27 @@
+package main
+
+import (
+	"log"
+	"os"
+	"muleshield/internal/api"
+	"muleshield/internal/audit"
+	"github.com/gofiber/fiber/v2"
+	"github.com/joho/godotenv"
+)
+
 func main() {
-    app := fiber.New()
+	godotenv.Load()
+	app := fiber.New()
 
-    // Public Route
-    app.Post("/login", handlers.Login)
+	// Initialize Audit Logger
+	auditLogger := audit.NewLogger(os.Getenv("AWS_REGION"), os.Getenv("DYNAMODB_TABLE"))
+	h := &api.Handler{Audit: auditLogger}
 
-    // Protected Routes
-    api := app.Group("/api", api.AuthMiddleware)
-    api.Post("/check-risk", handlers.HandleTransaction)
+	// Routes
+	app.Post("/login", h.Login)
+	
+	protected := app.Group("/api", api.AuthMiddleware)
+	protected.Post("/check-risk", h.CheckRisk)
 
-    app.Listen(":3000")
+	log.Fatal(app.Listen(":" + os.Getenv("PORT")))
 }

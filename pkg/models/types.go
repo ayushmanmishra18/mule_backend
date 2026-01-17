@@ -11,11 +11,6 @@ type Transaction struct {
 
 type RiskResponse struct {
 	TransactionID  string  `json:"transaction_id"`
-	RiskScore      float64 `json:"risk_score"`
-	Recommendation string  `json:"recommendation"`
-}
-
-type Credentials struct {
-	BankID   string `json:"bank_id"`
-	Password string `json:"password"`
+	RiskScore      float64 `json:"risk_score"` // 0.0 to 1.0
+	Recommendation string  `json:"recommendation"` // ALLOW, FLAG, BLOCK
 }

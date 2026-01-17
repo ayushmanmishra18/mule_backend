@@ -8,7 +8,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue v1.10.39
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.21.5
 	github.com/gofiber/fiber/v2 v2.52.0
-	github.com/golang-jwt/jwt/v5 v5.2.0
+	github.com/golang-jwt/jwt/v5 v5.3.0
 	github.com/joho/godotenv v1.5.1
 )
 

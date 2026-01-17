@@ -4,7 +4,6 @@ import (
 	"log"
 	"os"
 	"muleshield/internal/api"
-	"muleshield/internal/audit"
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 )
@@ -13,15 +12,17 @@ func main() {
 	godotenv.Load()
 	app := fiber.New()
 
-	// Initialize Audit Logger
-	auditLogger := audit.NewLogger(os.Getenv("AWS_REGION"), os.Getenv("DYNAMODB_TABLE"))
-	h := &api.Handler{Audit: auditLogger}
+	// RESTful API Endpoint for financial platforms
+	app.Post("/api/check-risk", api.CheckRisk)
 
-	// Routes
-	app.Post("/login", h.Login)
-	
-	protected := app.Group("/api", api.AuthMiddleware)
-	protected.Post("/check-risk", h.CheckRisk)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+	log.Fatal(app.Listen(":" + port))
 
-	log.Fatal(app.Listen(":" + os.Getenv("PORT")))
 }
+
+
+
+

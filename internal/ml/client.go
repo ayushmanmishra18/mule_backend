@@ -17,6 +17,8 @@ func GetRiskScore(tx models.Transaction) (*models.RiskResponse, error) {
 	defer resp.Body.Close()
 
 	var result models.RiskResponse
-	json.NewDecoder(resp.Body).Decode(&result)
+	if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
+		return nil, err
+	}
 	return &result, nil
 }

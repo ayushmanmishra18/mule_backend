@@ -1,41 +1,30 @@
 package api
 
 import (
-	"muleshield/internal/auth"
+	"log"
 	"muleshield/internal/ml"
-	"muleshield/internal/audit"
 	"muleshield/pkg/models"
 	"github.com/gofiber/fiber/v2"
 )
 
-type Handler struct {
-	Audit *audit.Logger
-}
-
-func (h *Handler) Login(c *fiber.Ctx) error {
-	var creds models.Credentials
-	c.BodyParser(&creds)
-
-	// Prototype: basic check
-	if creds.BankID == "admin_bank" && creds.Password == "secure123" {
-		token, _ := auth.GenerateToken(creds.BankID)
-		return c.JSON(fiber.Map{"token": token})
-	}
-	return c.Status(401).SendString("Unauthorized")
-}
-
-func (h *Handler) CheckRisk(c *fiber.Ctx) error {
+func CheckRisk(c *fiber.Ctx) error {
 	var tx models.Transaction
-	c.BodyParser(&tx)
+	if err := c.BodyParser(&tx); err != nil {
+		return c.Status(400).JSON(fiber.Map{"error": "Invalid transaction data"})
+	}
 
+	// Requesting real-time risk score from ML model
 	risk, err := ml.GetRiskScore(tx)
 	if err != nil {
-		return c.Status(500).JSON(fiber.Map{"error": "ML Service Unreachable"})
+		log.Printf("ML Service Error: %v", err)
+		return c.Status(500).JSON(fiber.Map{"error": "Fraud detection engine unavailable"})
 	}
 
+	// For the prototype, we log suspicious activity to the console instead of a database
 	if risk.RiskScore > 0.8 {
-		go h.Audit.LogHighRisk(tx, *risk)
+		log.Printf("[AUDIT] Flagged Transaction ID: %s, Score: %f", tx.TransactionID, risk.RiskScore)
 	}
 
 	return c.JSON(risk)
 }
+

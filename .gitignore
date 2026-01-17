@@ -1,0 +1,46 @@
+# --- Binaries & Build Artifacts ---
+# Compiled binaries (e.g., the final api executable)
+bin/
+/muleshield-api
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# --- Environment & Secrets (CRITICAL) ---
+# Never commit your secrets or AWS keys
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+secrets.json
+
+# --- Go Dependencies & Tools ---
+# Don't ignore go.mod and go.sum! They are needed for the build.
+# Only ignore vendor/ if you aren't using Go modules "vendor" mode.
+# vendor/
+*.test
+*.out
+
+# --- AWS & Local Config ---
+# Local AWS credentials if you use them for testing
+.aws/
+credentials
+aws-creds.json
+
+# --- IDE & System Files ---
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (GoLand)
+.idea/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+*.log
+tmp/

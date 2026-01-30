@@ -1,0 +1,384 @@
+{
+  "address": "0x1E9945e55F4c084dd79c08e2C411a61c756A9ACF",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "senderHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "receiverHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "reason",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "MuleReported",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "accountReports",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "transactionId",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "reason",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "reporter",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "flaggedAccounts",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_accountHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getReportCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_accountHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "isAccountFlagged",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_transactionId",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_senderHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_receiverHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_location",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_reason",
+          "type": "string"
+        }
+      ],
+      "name": "reportMule",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x7ae43120e70ada468493b08b611e1887dcb928c8e0e14db1db1430ee6d697c68",
+  "receipt": {
+    "to": null,
+    "from": "0x712c670352E964c29430e5f6F64bE8A1E73ff4f2",
+    "contractAddress": "0x1E9945e55F4c084dd79c08e2C411a61c756A9ACF",
+    "transactionIndex": 44,
+    "gasUsed": "889086",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x0324005ecf685f5b9a07750c3275d3b3e6efd3b94fd26737c9cad80ba17bb989",
+    "transactionHash": "0x7ae43120e70ada468493b08b611e1887dcb928c8e0e14db1db1430ee6d697c68",
+    "logs": [],
+    "blockNumber": 10147373,
+    "cumulativeGasUsed": "4254853",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "efd648f0c7e6fa0a4c45b810c76693c5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"senderHash\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"receiverHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"reason\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"MuleReported\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"accountReports\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"transactionId\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"location\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"reason\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"reporter\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"flaggedAccounts\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_accountHash\",\"type\":\"bytes32\"}],\"name\":\"getReportCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_accountHash\",\"type\":\"bytes32\"}],\"name\":\"isAccountFlagged\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_transactionId\",\"type\":\"string\"},{\"internalType\":\"bytes32\",\"name\":\"_senderHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"_receiverHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_location\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_reason\",\"type\":\"string\"}],\"name\":\"reportMule\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getReportCount(bytes32)\":{\"details\":\"Get total reports for a specific account hash.\"},\"isAccountFlagged(bytes32)\":{\"details\":\"Check if an account hash is in the blacklist.\"},\"reportMule(string,bytes32,bytes32,uint256,string,string)\":{\"details\":\"Report a detected mule transaction.\",\"params\":{\"_amount\":\"The transaction amount\",\"_location\":\"The location string from the transaction\",\"_reason\":\"Context for the flag (e.g., \\\"ML Score 0.95\\\")\",\"_receiverHash\":\"SHA-256 hash of the receiver's account number\",\"_senderHash\":\"SHA-256 hash of the sender's account number\",\"_transactionId\":\"The unique ID from your backend (tx.TransactionID)\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/mule.sol\":\"MuleRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/mule.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.19;\\n\\ncontract MuleRegistry {\\n    // Event to notify listeners (other banks) of a new mule report\\n    event MuleReported(\\n        bytes32 indexed senderHash,\\n        bytes32 indexed receiverHash,\\n        uint256 amount,\\n        string reason,\\n        uint256 timestamp\\n    );\\n\\n    // Structure to hold details of a specific fraud report\\n    struct FraudReport {\\n        string transactionId; // The original bank's internal ID\\n        uint256 amount;\\n        string location;\\n        uint256 timestamp;\\n        string reason;      // e.g., \\\"High Risk Score > 0.8\\\"\\n        address reporter;   // The wallet address of the bank reporting this\\n    }\\n\\n    // Mapping to check if a specific account hash has been flagged\\n    // accountHash => bool isSuspicious\\n    mapping(bytes32 => bool) public flaggedAccounts;\\n\\n    // Mapping to retrieve history of reports for a specific account hash\\n    mapping(bytes32 => FraudReport[]) public accountReports;\\n\\n    address public owner;\\n\\n    constructor() {\\n        owner = msg.sender;\\n    }\\n\\n    /**\\n     * @dev Report a detected mule transaction.\\n     * @param _transactionId The unique ID from your backend (tx.TransactionID)\\n     * @param _senderHash SHA-256 hash of the sender's account number\\n     * @param _receiverHash SHA-256 hash of the receiver's account number\\n     * @param _amount The transaction amount\\n     * @param _location The location string from the transaction\\n     * @param _reason Context for the flag (e.g., \\\"ML Score 0.95\\\")\\n     */\\n    function reportMule(\\n        string memory _transactionId,\\n        bytes32 _senderHash,\\n        bytes32 _receiverHash,\\n        uint256 _amount,\\n        string memory _location,\\n        string memory _reason\\n    ) public {\\n        // Create the report struct\\n        FraudReport memory newReport = FraudReport({\\n            transactionId: _transactionId,\\n            amount: _amount,\\n            location: _location,\\n            timestamp: block.timestamp,\\n            reason: _reason,\\n            reporter: msg.sender\\n        });\\n\\n        // Store the report for both sender and receiver\\n        accountReports[_senderHash].push(newReport);\\n        accountReports[_receiverHash].push(newReport);\\n\\n        // Mark accounts as flagged for O(1) lookup\\n        flaggedAccounts[_senderHash] = true;\\n        flaggedAccounts[_receiverHash] = true;\\n\\n        emit MuleReported(_senderHash, _receiverHash, _amount, _reason, block.timestamp);\\n    }\\n\\n    /**\\n     * @dev Check if an account hash is in the blacklist.\\n     */\\n    function isAccountFlagged(bytes32 _accountHash) public view returns (bool) {\\n        return flaggedAccounts[_accountHash];\\n    }\\n\\n    /**\\n     * @dev Get total reports for a specific account hash.\\n     */\\n    function getReportCount(bytes32 _accountHash) public view returns (uint256) {\\n        return accountReports[_accountHash].length;\\n    }\\n}\",\"keccak256\":\"0x9b957469b4d66a4bbad0a2a72ad25461c1b6b6e9a2a2b6b9c5378a3e3e8b8f17\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5033600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610eb8806100606000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80634a0aae5814610067578063580317eb146100975780635b0c2bd4146100c7578063675ef4bb146100fc5780638da5cb5b1461012c578063da1f0d4c1461014a575b600080fd5b610081600480360381019061007c91906106eb565b610166565b60405161008e9190610733565b60405180910390f35b6100b160048036038101906100ac91906106eb565b610186565b6040516100be9190610767565b60405180910390f35b6100e160048036038101906100dc91906107ae565b6101a6565b6040516100f3969594939291906108bf565b60405180910390f35b610116600480360381019061011191906106eb565b6103b7565b6040516101239190610733565b60405180910390f35b6101346103e0565b6040516101419190610935565b60405180910390f35b610164600480360381019061015f9190610a85565b610406565b005b60006020528060005260406000206000915054906101000a900460ff1681565b600060016000838152602001908152602001600020805490509050919050565b600160205281600052604060002081815481106101c257600080fd5b9060005260206000209060060201600091509150508060000180546101e690610b95565b80601f016020809104026020016040519081016040528092919081815260200182805461021290610b95565b801561025f5780601f106102345761010080835404028352916020019161025f565b820191906000526020600020905b81548152906001019060200180831161024257829003601f168201915b50505050509080600101549080600201805461027a90610b95565b80601f01602080910402602001604051908101604052809291908181526020018280546102a690610b95565b80156102f35780601f106102c8576101008083540402835291602001916102f3565b820191906000526020600020905b8154815290600101906020018083116102d657829003601f168201915b50505050509080600301549080600401805461030e90610b95565b80601f016020809104026020016040519081016040528092919081815260200182805461033a90610b95565b80156103875780601f1061035c57610100808354040283529160200191610387565b820191906000526020600020905b81548152906001019060200180831161036a57829003601f168201915b5050505050908060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905086565b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60006040518060c001604052808881526020018581526020018481526020014281526020018381526020013373ffffffffffffffffffffffffffffffffffffffff16815250905060016000878152602001908152602001600020819080600181540180825580915050600190039060005260206000209060060201600090919091909150600082015181600001908161049f9190610d72565b506020820151816001015560408201518160020190816104bf9190610d72565b506060820151816003015560808201518160040190816104df9190610d72565b5060a08201518160050160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505060016000868152602001908152602001600020819080600181540180825580915050600190039060005260206000209060060201600090919091909150600082015181600001908161057b9190610d72565b5060208201518160010155604082015181600201908161059b9190610d72565b506060820151816003015560808201518160040190816105bb9190610d72565b5060a08201518160050160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050600160008088815260200190815260200160002060006101000a81548160ff021916908315150217905550600160008087815260200190815260200160002060006101000a81548160ff02191690831515021790555084867f83836cc0d166876e68904bae129ac8f5aa73eb9a2ea197f1cf947e3871b1098886854260405161069093929190610e44565b60405180910390a350505050505050565b6000604051905090565b600080fd5b600080fd5b6000819050919050565b6106c8816106b5565b81146106d357600080fd5b50565b6000813590506106e5816106bf565b92915050565b600060208284031215610701576107006106ab565b5b600061070f848285016106d6565b91505092915050565b60008115159050919050565b61072d81610718565b82525050565b60006020820190506107486000830184610724565b92915050565b6000819050919050565b6107618161074e565b82525050565b600060208201905061077c6000830184610758565b92915050565b61078b8161074e565b811461079657600080fd5b50565b6000813590506107a881610782565b92915050565b600080604083850312156107c5576107c46106ab565b5b60006107d3858286016106d6565b92505060206107e485828601610799565b9150509250929050565b600081519050919050565b600082825260208201905092915050565b60005b8381101561082857808201518184015260208101905061080d565b60008484015250505050565b6000601f19601f8301169050919050565b6000610850826107ee565b61085a81856107f9565b935061086a81856020860161080a565b61087381610834565b840191505092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006108a98261087e565b9050919050565b6108b98161089e565b82525050565b600060c08201905081810360008301526108d98189610845565b90506108e86020830188610758565b81810360408301526108fa8187610845565b90506109096060830186610758565b818103608083015261091b8185610845565b905061092a60a08301846108b0565b979650505050505050565b600060208201905061094a60008301846108b0565b92915050565b600080fd5b600080fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b61099282610834565b810181811067ffffffffffffffff821117156109b1576109b061095a565b5b80604052505050565b60006109c46106a1565b90506109d08282610989565b919050565b600067ffffffffffffffff8211156109f0576109ef61095a565b5b6109f982610834565b9050602081019050919050565b82818337600083830152505050565b6000610a28610a23846109d5565b6109ba565b905082815260208101848484011115610a4457610a43610955565b5b610a4f848285610a06565b509392505050565b600082601f830112610a6c57610a6b610950565b5b8135610a7c848260208601610a15565b91505092915050565b60008060008060008060c08789031215610aa257610aa16106ab565b5b600087013567ffffffffffffffff811115610ac057610abf6106b0565b5b610acc89828a01610a57565b9650506020610add89828a016106d6565b9550506040610aee89828a016106d6565b9450506060610aff89828a01610799565b935050608087013567ffffffffffffffff811115610b2057610b1f6106b0565b5b610b2c89828a01610a57565b92505060a087013567ffffffffffffffff811115610b4d57610b4c6106b0565b5b610b5989828a01610a57565b9150509295509295509295565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680610bad57607f821691505b602082108103610bc057610bbf610b66565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b600060088302610c287fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82610beb565b610c328683610beb565b95508019841693508086168417925050509392505050565b6000819050919050565b6000610c6f610c6a610c658461074e565b610c4a565b61074e565b9050919050565b6000819050919050565b610c8983610c54565b610c9d610c9582610c76565b848454610bf8565b825550505050565b600090565b610cb2610ca5565b610cbd818484610c80565b505050565b5b81811015610ce157610cd6600082610caa565b600181019050610cc3565b5050565b601f821115610d2657610cf781610bc6565b610d0084610bdb565b81016020851015610d0f578190505b610d23610d1b85610bdb565b830182610cc2565b50505b505050565b600082821c905092915050565b6000610d4960001984600802610d2b565b1980831691505092915050565b6000610d628383610d38565b9150826002028217905092915050565b610d7b826107ee565b67ffffffffffffffff811115610d9457610d9361095a565b5b610d9e8254610b95565b610da9828285610ce5565b600060209050601f831160018114610ddc5760008415610dca578287015190505b610dd48582610d56565b865550610e3c565b601f198416610dea86610bc6565b60005b82811015610e1257848901518255600182019150602085019450602081019050610ded565b86831015610e2f5784890151610e2b601f891682610d38565b8355505b6001600288020188555050505b505050505050565b6000606082019050610e596000830186610758565b8181036020830152610e6b8185610845565b9050610e7a6040830184610758565b94935050505056fea2646970667358221220ba97dfdd25220321e74abc36b6527d5b1019f0bd2c5bd12641142122cca5c3f464736f6c634300081c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80634a0aae5814610067578063580317eb146100975780635b0c2bd4146100c7578063675ef4bb146100fc5780638da5cb5b1461012c578063da1f0d4c1461014a575b600080fd5b610081600480360381019061007c91906106eb565b610166565b60405161008e9190610733565b60405180910390f35b6100b160048036038101906100ac91906106eb565b610186565b6040516100be9190610767565b60405180910390f35b6100e160048036038101906100dc91906107ae565b6101a6565b6040516100f3969594939291906108bf565b60405180910390f35b610116600480360381019061011191906106eb565b6103b7565b6040516101239190610733565b60405180910390f35b6101346103e0565b6040516101419190610935565b60405180910390f35b610164600480360381019061015f9190610a85565b610406565b005b60006020528060005260406000206000915054906101000a900460ff1681565b600060016000838152602001908152602001600020805490509050919050565b600160205281600052604060002081815481106101c257600080fd5b9060005260206000209060060201600091509150508060000180546101e690610b95565b80601f016020809104026020016040519081016040528092919081815260200182805461021290610b95565b801561025f5780601f106102345761010080835404028352916020019161025f565b820191906000526020600020905b81548152906001019060200180831161024257829003601f168201915b50505050509080600101549080600201805461027a90610b95565b80601f01602080910402602001604051908101604052809291908181526020018280546102a690610b95565b80156102f35780601f106102c8576101008083540402835291602001916102f3565b820191906000526020600020905b8154815290600101906020018083116102d657829003601f168201915b50505050509080600301549080600401805461030e90610b95565b80601f016020809104026020016040519081016040528092919081815260200182805461033a90610b95565b80156103875780601f1061035c57610100808354040283529160200191610387565b820191906000526020600020905b81548152906001019060200180831161036a57829003601f168201915b5050505050908060050160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905086565b600080600083815260200190815260200160002060009054906101000a900460ff169050919050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60006040518060c001604052808881526020018581526020018481526020014281526020018381526020013373ffffffffffffffffffffffffffffffffffffffff16815250905060016000878152602001908152602001600020819080600181540180825580915050600190039060005260206000209060060201600090919091909150600082015181600001908161049f9190610d72565b506020820151816001015560408201518160020190816104bf9190610d72565b506060820151816003015560808201518160040190816104df9190610d72565b5060a08201518160050160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505060016000868152602001908152602001600020819080600181540180825580915050600190039060005260206000209060060201600090919091909150600082015181600001908161057b9190610d72565b5060208201518160010155604082015181600201908161059b9190610d72565b506060820151816003015560808201518160040190816105bb9190610d72565b5060a08201518160050160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050600160008088815260200190815260200160002060006101000a81548160ff021916908315150217905550600160008087815260200190815260200160002060006101000a81548160ff02191690831515021790555084867f83836cc0d166876e68904bae129ac8f5aa73eb9a2ea197f1cf947e3871b1098886854260405161069093929190610e44565b60405180910390a350505050505050565b6000604051905090565b600080fd5b600080fd5b6000819050919050565b6106c8816106b5565b81146106d357600080fd5b50565b6000813590506106e5816106bf565b92915050565b600060208284031215610701576107006106ab565b5b600061070f848285016106d6565b91505092915050565b60008115159050919050565b61072d81610718565b82525050565b60006020820190506107486000830184610724565b92915050565b6000819050919050565b6107618161074e565b82525050565b600060208201905061077c6000830184610758565b92915050565b61078b8161074e565b811461079657600080fd5b50565b6000813590506107a881610782565b92915050565b600080604083850312156107c5576107c46106ab565b5b60006107d3858286016106d6565b92505060206107e485828601610799565b9150509250929050565b600081519050919050565b600082825260208201905092915050565b60005b8381101561082857808201518184015260208101905061080d565b60008484015250505050565b6000601f19601f8301169050919050565b6000610850826107ee565b61085a81856107f9565b935061086a81856020860161080a565b61087381610834565b840191505092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006108a98261087e565b9050919050565b6108b98161089e565b82525050565b600060c08201905081810360008301526108d98189610845565b90506108e86020830188610758565b81810360408301526108fa8187610845565b90506109096060830186610758565b818103608083015261091b8185610845565b905061092a60a08301846108b0565b979650505050505050565b600060208201905061094a60008301846108b0565b92915050565b600080fd5b600080fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b61099282610834565b810181811067ffffffffffffffff821117156109b1576109b061095a565b5b80604052505050565b60006109c46106a1565b90506109d08282610989565b919050565b600067ffffffffffffffff8211156109f0576109ef61095a565b5b6109f982610834565b9050602081019050919050565b82818337600083830152505050565b6000610a28610a23846109d5565b6109ba565b905082815260208101848484011115610a4457610a43610955565b5b610a4f848285610a06565b509392505050565b600082601f830112610a6c57610a6b610950565b5b8135610a7c848260208601610a15565b91505092915050565b60008060008060008060c08789031215610aa257610aa16106ab565b5b600087013567ffffffffffffffff811115610ac057610abf6106b0565b5b610acc89828a01610a57565b9650506020610add89828a016106d6565b9550506040610aee89828a016106d6565b9450506060610aff89828a01610799565b935050608087013567ffffffffffffffff811115610b2057610b1f6106b0565b5b610b2c89828a01610a57565b92505060a087013567ffffffffffffffff811115610b4d57610b4c6106b0565b5b610b5989828a01610a57565b9150509295509295509295565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b60006002820490506001821680610bad57607f821691505b602082108103610bc057610bbf610b66565b5b50919050565b60008190508160005260206000209050919050565b60006020601f8301049050919050565b600082821b905092915050565b600060088302610c287fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82610beb565b610c328683610beb565b95508019841693508086168417925050509392505050565b6000819050919050565b6000610c6f610c6a610c658461074e565b610c4a565b61074e565b9050919050565b6000819050919050565b610c8983610c54565b610c9d610c9582610c76565b848454610bf8565b825550505050565b600090565b610cb2610ca5565b610cbd818484610c80565b505050565b5b81811015610ce157610cd6600082610caa565b600181019050610cc3565b5050565b601f821115610d2657610cf781610bc6565b610d0084610bdb565b81016020851015610d0f578190505b610d23610d1b85610bdb565b830182610cc2565b50505b505050565b600082821c905092915050565b6000610d4960001984600802610d2b565b1980831691505092915050565b6000610d628383610d38565b9150826002028217905092915050565b610d7b826107ee565b67ffffffffffffffff811115610d9457610d9361095a565b5b610d9e8254610b95565b610da9828285610ce5565b600060209050601f831160018114610ddc5760008415610dca578287015190505b610dd48582610d56565b865550610e3c565b601f198416610dea86610bc6565b60005b82811015610e1257848901518255600182019150602085019450602081019050610ded565b86831015610e2f5784890151610e2b601f891682610d38565b8355505b6001600288020188555050505b505050505050565b6000606082019050610e596000830186610758565b8181036020830152610e6b8185610845565b9050610e7a6040830184610758565b94935050505056fea2646970667358221220ba97dfdd25220321e74abc36b6527d5b1019f0bd2c5bd12641142122cca5c3f464736f6c634300081c0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "getReportCount(bytes32)": {
+        "details": "Get total reports for a specific account hash."
+      },
+      "isAccountFlagged(bytes32)": {
+        "details": "Check if an account hash is in the blacklist."
+      },
+      "reportMule(string,bytes32,bytes32,uint256,string,string)": {
+        "details": "Report a detected mule transaction.",
+        "params": {
+          "_amount": "The transaction amount",
+          "_location": "The location string from the transaction",
+          "_reason": "Context for the flag (e.g., \"ML Score 0.95\")",
+          "_receiverHash": "SHA-256 hash of the receiver's account number",
+          "_senderHash": "SHA-256 hash of the sender's account number",
+          "_transactionId": "The unique ID from your backend (tx.TransactionID)"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 30,
+        "contract": "contracts/mule.sol:MuleRegistry",
+        "label": "flaggedAccounts",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_bytes32,t_bool)"
+      },
+      {
+        "astId": 36,
+        "contract": "contracts/mule.sol:MuleRegistry",
+        "label": "accountReports",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_bytes32,t_array(t_struct(FraudReport)26_storage)dyn_storage)"
+      },
+      {
+        "astId": 38,
+        "contract": "contracts/mule.sol:MuleRegistry",
+        "label": "owner",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(FraudReport)26_storage)dyn_storage": {
+        "base": "t_struct(FraudReport)26_storage",
+        "encoding": "dynamic_array",
+        "label": "struct MuleRegistry.FraudReport[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_bytes32,t_array(t_struct(FraudReport)26_storage)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => struct MuleRegistry.FraudReport[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_struct(FraudReport)26_storage)dyn_storage"
+      },
+      "t_mapping(t_bytes32,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(FraudReport)26_storage": {
+        "encoding": "inplace",
+        "label": "struct MuleRegistry.FraudReport",
+        "members": [
+          {
+            "astId": 15,
+            "contract": "contracts/mule.sol:MuleRegistry",
+            "label": "transactionId",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 17,
+            "contract": "contracts/mule.sol:MuleRegistry",
+            "label": "amount",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 19,
+            "contract": "contracts/mule.sol:MuleRegistry",
+            "label": "location",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 21,
+            "contract": "contracts/mule.sol:MuleRegistry",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 23,
+            "contract": "contracts/mule.sol:MuleRegistry",
+            "label": "reason",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 25,
+            "contract": "contracts/mule.sol:MuleRegistry",
+            "label": "reporter",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_address"
+          }
+        ],
+        "numberOfBytes": "192"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/mule.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.19;\n\ncontract MuleRegistry {\n    // Event to notify listeners (other banks) of a new mule report\n    event MuleReported(\n        bytes32 indexed senderHash,\n        bytes32 indexed receiverHash,\n        uint256 amount,\n        string reason,\n        uint256 timestamp\n    );\n\n    // Structure to hold details of a specific fraud report\n    struct FraudReport {\n        string transactionId; // The original bank's internal ID\n        uint256 amount;\n        string location;\n        uint256 timestamp;\n        string reason;      // e.g., \"High Risk Score > 0.8\"\n        address reporter;   // The wallet address of the bank reporting this\n    }\n\n    // Mapping to check if a specific account hash has been flagged\n    // accountHash => bool isSuspicious\n    mapping(bytes32 => bool) public flaggedAccounts;\n\n    // Mapping to retrieve history of reports for a specific account hash\n    mapping(bytes32 => FraudReport[]) public accountReports;\n\n    address public owner;\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    /**\n     * @dev Report a detected mule transaction.\n     * @param _transactionId The unique ID from your backend (tx.TransactionID)\n     * @param _senderHash SHA-256 hash of the sender's account number\n     * @param _receiverHash SHA-256 hash of the receiver's account number\n     * @param _amount The transaction amount\n     * @param _location The location string from the transaction\n     * @param _reason Context for the flag (e.g., \"ML Score 0.95\")\n     */\n    function reportMule(\n        string memory _transactionId,\n        bytes32 _senderHash,\n        bytes32 _receiverHash,\n        uint256 _amount,\n        string memory _location,\n        string memory _reason\n    ) public {\n        // Create the report struct\n        FraudReport memory newReport = FraudReport({\n            transactionId: _transactionId,\n            amount: _amount,\n            location: _location,\n            timestamp: block.timestamp,\n            reason: _reason,\n            reporter: msg.sender\n        });\n\n        // Store the report for both sender and receiver\n        accountReports[_senderHash].push(newReport);\n        accountReports[_receiverHash].push(newReport);\n\n        // Mark accounts as flagged for O(1) lookup\n        flaggedAccounts[_senderHash] = true;\n        flaggedAccounts[_receiverHash] = true;\n\n        emit MuleReported(_senderHash, _receiverHash, _amount, _reason, block.timestamp);\n    }\n\n    /**\n     * @dev Check if an account hash is in the blacklist.\n     */\n    function isAccountFlagged(bytes32 _accountHash) public view returns (bool) {\n        return flaggedAccounts[_accountHash];\n    }\n\n    /**\n     * @dev Get total reports for a specific account hash.\n     */\n    function getReportCount(bytes32 _accountHash) public view returns (uint256) {\n        return accountReports[_accountHash].length;\n    }\n}"
+    }
+  },
+  "settings": {
+    "evmVersion": "paris",
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

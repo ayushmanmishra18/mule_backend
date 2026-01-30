@@ -11,7 +11,7 @@ def predict():
     # Mocking a risk score result
     return jsonify({
         "transaction_id": data.get("transaction_id"),
-        "risk_score": 0.15,
+        "risk_score": 0.95,
         "recommendation": "ALLOW"
     })
 
